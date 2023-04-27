@@ -1,5 +1,6 @@
 
 •   How to build and run the code
+
       -  Visit the main page https://github.com/dubeymoh/GlobalBlueVatCalculator and click on code button.
       -  You can either copy the link(https://github.com/dubeymoh/GlobalBlueVatCalculator.git) for cloning the code or can click on Open with Visual studio button.
       -  The Open with Visual Studio button prompts for an alert where we must click on Open Visual Studio Web Protocol Handler Selector. 
@@ -26,6 +27,7 @@
  
     - Implementation of a service level design pattern to handle the business complexities in future.
     - Implementation of unit tests on Angular.
+    - The amount calculated with decimal places could be rounded off to certain precision.
 
 •   Assessment relevant info
 
