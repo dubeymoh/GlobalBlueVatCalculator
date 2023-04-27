@@ -1,0 +1,11 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/GlobalBlue_VAT_Calculator/bin/Debug/net6.0
+/GlobalBlue_VAT_Calculator/ClientApp/.angular/cache/14.0.3
+/GlobalBlue_VAT_Calculator/ClientApp/node_modules
+/GlobalBlue_VAT_Calculator/obj
+/GlobalBlue_VAT_Calculator.Test/bin/Debug/net6.0
+/GlobalBlue_VAT_Calculator.Test/obj
