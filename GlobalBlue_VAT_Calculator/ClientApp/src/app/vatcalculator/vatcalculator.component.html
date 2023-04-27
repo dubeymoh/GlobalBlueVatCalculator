@@ -1,0 +1,75 @@
+<div>
+  <div>
+    <mat-expansion-panel [expanded]="true">
+      <mat-expansion-panel-header class="dd-handle">
+        <mat-panel-title>
+          VAT Caculator
+        </mat-panel-title>
+      </mat-expansion-panel-header>
+      <div>
+        <mat-list class="mt-30">
+          <mat-list-item>
+            <form class="example-form">
+              <mat-form-field class="example-full-width" appearance="fill">
+                <mat-label>Country</mat-label>
+                <input type="text"
+                       placeholder="Pick one"
+                       aria-label="Number"
+                       [(ngModel)]="selectedCountry"
+                       matInput
+                       [formControl]="myControl"
+                       [matAutocomplete]="auto">
+                <mat-autocomplete (optionSelected)="onCountrySelection()" autoActiveFirstOption #auto="matAutocomplete">
+                  <mat-option *ngFor="let country of filteredOptions | async" [value]="country.countryName">
+                    {{ country.countryName }}
+                  </mat-option>
+                </mat-autocomplete>
+              </mat-form-field>
+            </form>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item class="vat-rate-percent">
+            <div fxLayout="row" fxLayoutAlign="start center">
+              <mat-radio-group [(ngModel)]="selectedVatRate" (ngModelChange)="calculateVatRate()">
+                <div>
+                  VAT Rates:&nbsp;&nbsp;&nbsp;&nbsp;
+                  <mat-radio-button *ngFor="let rate of applicableVatRates" [value]="rate">
+                    {{ rate }}%
+                  </mat-radio-button>
+                </div>
+              </mat-radio-group>
+            </div>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+        </mat-list>
+      </div>
+      <div class="mt-15">
+        <mat-radio-group fxLayout="column" fxLayoutAlign="space-evenly start" aria-labelledby="example-radio-group-label"
+                         (change)="onAnmountTypeSelectionChange()"
+                         [(ngModel)]="selectedAmt">
+          <div>
+            <mat-radio-button value="{{AmtKeys[0]}}">
+            </mat-radio-button>
+            <mat-form-field>
+              <input matInput [disabled]="disableNetAmt" (click)="onTextBoxClick(AmtKeys[0])" placeholder="Price without VAT" [(ngModel)]="netAmount" (ngModelChange)="calculateVatRate()">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-radio-button value="{{AmtKeys[2]}}">
+            </mat-radio-button>
+            <mat-form-field>
+              <input matInput [disabled]="disableVatAmt" (click)="onTextBoxClick(AmtKeys[2])" placeholder="Value-Added Tax" [(ngModel)]="vatAmount" (ngModelChange)="calculateVatRate()">
+            </mat-form-field>
+          </div>
+          <div>
+            <mat-radio-button value="{{AmtKeys[1]}}">
+            </mat-radio-button>
+            <mat-form-field>
+              <input matInput [disabled]="disableGrossAmt" (click)="onTextBoxClick(AmtKeys[1])" placeholder="Price incl. VAT" [(ngModel)]="grossAmount" (ngModelChange)="calculateVatRate()">
+            </mat-form-field>
+          </div>
+        </mat-radio-group>
+      </div>
+    </mat-expansion-panel>
+  </div>
+</div>

@@ -1,0 +1,69 @@
+.mat-form-field-label {
+  top: -6px; /* adjust this value to increase/decrease the spacing */
+  font-size: 14px; /* adjust the font size if necessary */
+  color: #666; /* adjust the color if necessary */
+}
+
+/* Give some spacing between the form fields */
+.mat-form-field, .mat-radio-group {
+  margin-bottom: 20px;
+}
+
+.dd-handle {
+  background-color: lightgray;
+}
+
+.panel-body {
+  padding: 30px;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+/* Give some spacing between the radio buttons */
+.mat-radio-button {
+  margin-right: 10px;
+}
+
+.vat-rate-percent {
+  padding: 10px !important;
+}
+
+.mt-15 {
+  margin-top: 15px;
+}
+
+.amount-column {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+}
+
+/* Add some padding to the output fields */
+input[placeholder="Net amount"],
+input[placeholder="Gross amount"],
+input[placeholder="VAT amount"] {
+  padding: 5px;
+}
+
+/* Make the error message red and bold */
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
+mat-radio-group {
+  display: flex; /* Use flexbox to align the radio buttons horizontally */
+  flex-direction: row; /* Align the radio buttons in a row */
+  justify-content: center; /* Center the radio buttons within the container */
+}
+
+mat-radio-button {
+  margin-right: 10px; /* Add some margin between the radio buttons */
+}
+
+.mat-option {
+  padding: 0 8px;
+  line-height: 1.5em;
+}

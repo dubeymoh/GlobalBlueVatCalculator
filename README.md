@@ -1,2 +1,1 @@
-# GlobalBlueVatCalculator
-GlobalBlueVatCalculator
+# GlobalBlue_VAT_Calculator
